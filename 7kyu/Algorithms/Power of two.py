@@ -15,9 +15,5 @@ Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 
 
 
 def power_of_two(x):
-    if x == 0:
-        return 0
-    if (x & (~(x - 1))) == x:
-        return 1
-    return 0
+    return (x & (~(x - 1))) == x and x!=0
     
