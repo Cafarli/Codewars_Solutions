@@ -11,3 +11,8 @@ true_if_even = lambda value, index: value % 2 == 0
 find_in_array([1,3,5,6,7], true_if_even) # --> 3
 """
 
+def find_in_array(seq, predicate):
+    for index, value in enumerate(seq):
+        if predicate(value, index):
+            return index
+    return -1
